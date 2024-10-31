@@ -23,6 +23,7 @@ import CacheIn from "../views/CacheIn.vue";
 import DynaForm from "../views/DynaForm.vue";
 import Graphic from "../views/Graphic.vue";
 import Theme from "../views/Theme.vue";
+import Cycle from "../views/Cycle.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -48,6 +49,7 @@ const routes = [
   { path: "/dyna-form", name: "DynaForm", component: DynaForm },
   { path: "/graphic", name: "Graphic", component: Graphic },
   { path: "/theme", name: "Theme", component: Theme },
+  { path: "/cycle", name: "Cycle", component: Cycle },
 ];
 
 const router = createRouter({

@@ -1,0 +1,19 @@
+Exemples liens dynamique Vuex ou data :
+:class
+:style
+:model
+:value
+:placeholder
+:disabled
+:src
+:href
+
+Evénements :
+@click
+@input ( a chaque input)
+@change (quand perte focus du champ)
+@submit
+@focus + @blur
+@mouseover + @mouseleave
+@keydown, @keyup, @keypress
+@scroll

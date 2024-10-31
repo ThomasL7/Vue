@@ -3,9 +3,10 @@
     <h2>Gestion des États avec Vuex</h2>
     <input v-model="newTask" placeholder="Ajouter une tâche" @keyup.enter="submitTask" />
     <button @click="submitTask">Ajouter</button>
+    <button @click="loadTasks">Charger les tâches</button>
     <ul>
       <li v-for="(task, index) in tasks" :key="index">
-        <input type="checkbox" v-model="task.completed" @change="toggleTask(index)" />
+        <input type="checkbox" :checked="task.completed" @change="toggleTask(index)" />
         <span :class="{ completed: task.completed }">{{ task.text }}</span>
         <button @click="removeTask(index)">Supprimer</button>
       </li>
@@ -14,7 +15,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapGetters } from "vuex";
+import { mapState, mapMutations, mapGetters, mapActions } from "vuex";
 
 export default {
   computed: {
@@ -28,6 +29,7 @@ export default {
   },
   methods: {
     ...mapMutations(["addTask", "removeTask", "toggleTask"]),
+    ...mapActions(["loadTasks"]),
     submitTask() {
       if (this.newTask.trim() !== "") {
         this.addTask({ text: this.newTask, completed: false });

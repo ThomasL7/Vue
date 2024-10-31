@@ -26,6 +26,7 @@
       <li><router-link to="/dyna-form">Dynamic form</router-link></li>
       <li><router-link to="/graphic">Graphic</router-link></li>
       <li><router-link to="/theme">Theme</router-link></li>
+      <li><router-link to="/cycle">Cycle</router-link></li>
     </ul>
   </nav>
 </template>
